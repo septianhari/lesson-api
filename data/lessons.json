@@ -1,0 +1,48 @@
+{
+  "error": false,
+  "message": "Stories fetched successfully",
+  "listLessons": [
+    {
+      "id": "lesson-FvU4u0Vp2S3PMsFg",
+      "title": "Learn Basic A-F",
+      "subTitle": "Beginner - 6 Lessons",
+      "photoUrl": "https://storage.googleapis.com/another-file-deployment/assets/icon-material/1.png",
+      "completed": true
+    },
+    {
+      "id": "lesson-FvU4u0Vp2S3PMsFg",
+      "title": "Learn Basic A-F",
+      "subTitle": "Beginner - 6 Lessons",
+      "photoUrl": "https://storage.googleapis.com/another-file-deployment/assets/icon-material/1.png",
+      "completed": false
+    },
+    {
+      "id": "lesson-FvU4u0Vp2S3PMsFg",
+      "title": "Learn Basic A-F",
+      "subTitle": "Beginner - 6 Lessons",
+      "photoUrl": "https://storage.googleapis.com/another-file-deployment/assets/icon-material/1.png",
+      "completed": false
+    },
+    {
+      "id": "lesson-FvU4u0Vp2S3PMsFg",
+      "title": "Learn Basic A-F",
+      "subTitle": "Beginner - 6 Lessons",
+      "photoUrl": "https://storage.googleapis.com/another-file-deployment/assets/icon-material/1.png",
+      "completed": false
+    },
+    {
+      "id": "lesson-NewId123",
+      "title": "Learn Advanced A-Z",
+      "subTitle": "Intermediate - 10 Lessons",
+      "photoUrl": "https://storage.googleapis.com/another-file-deployment/assets/icon-material/4.png",
+      "completed": false
+    },
+    {
+      "id": "lesson-NewId123",
+      "title": "Learn Advanced A-Z",
+      "subTitle": "Intermediate - 10 Lessons",
+      "photoUrl": "https://storage.googleapis.com/another-file-deployment/assets/icon-material/4.png",
+      "completed": true
+    }
+  ]
+}
