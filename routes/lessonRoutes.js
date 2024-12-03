@@ -1,17 +1,78 @@
+// routes/lessonRoutes.js
 const express = require('express');
 const router = express.Router();
-const lessonController = require('../controllers/lessonController');
 
-// Mendapatkan semua lessons
-router.get('/lessons', lessonController.getAllLessons);
+// Contoh data lesson dengan photoUrl
+const lessons = [
+  {
+    id: 'lesson-1',
+    title: 'Learn Basic A-F',
+    subTitle: 'Beginner - 6 Lessons',
+    photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/1.png',
+    completed: false, 
+  },
+  {
+    id: 'lesson-2',
+    title: 'Learn Basic G-Z',
+    subTitle: 'Beginner - 6 Lessons',
+    photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/1.png',  
+    completed: true
+  }
+];
 
-// Menambahkan lesson baru
-router.post('/lessons', lessonController.addLesson);
+// GET /api/lessons
+router.get('/lessons', (req, res) => {
+  res.json(lessons);  // Mengirimkan data lengkap termasuk photoUrl
+});
 
-// Memperbarui lesson berdasarkan ID
-router.put('/lessons/:id', lessonController.updateLesson);
+// POST /api/lessons
+router.post('/lessons', (req, res) => {
+  const { title, subTitle, completed, photoUrl } = req.body;
+  const newLesson = {
+    id: `lesson-${lessons.length + 1}`,
+    title,
+    subTitle,
+    completed,
+    photoUrl  // Pastikan photoUrl juga diterima dari request body
+  };
+  lessons.push(newLesson);
+  res.status(201).json({ message: 'Lesson added successfully!', lesson: newLesson });
+});
 
-// Menghapus lesson berdasarkan ID
-router.delete('/lessons/:id', lessonController.deleteLesson);
+// GET /api/lessons/:id
+router.get('/lessons/:id', (req, res) => {
+  const lesson = lessons.find(l => l.id === req.params.id);
+  if (lesson) {
+    res.json(lesson);
+  } else {
+    res.status(404).json({ message: 'Lesson not found' });
+  }
+});
+
+// PUT /api/lessons/:id
+router.put('/lessons/:id', (req, res) => {
+  const { title, subTitle, completed, photoUrl } = req.body;
+  const lesson = lessons.find(l => l.id === req.params.id);
+  if (lesson) {
+    lesson.title = title || lesson.title;
+    lesson.subTitle = subTitle || lesson.subTitle;
+    lesson.completed = completed !== undefined ? completed : lesson.completed;
+    lesson.photoUrl = photoUrl || lesson.photoUrl;  // Update photoUrl jika ada
+    res.json({ message: 'Lesson updated successfully!', lesson });
+  } else {
+    res.status(404).json({ message: 'Lesson not found' });
+  }
+});
+
+// DELETE /api/lessons/:id
+router.delete('/lessons/:id', (req, res) => {
+  const index = lessons.findIndex(l => l.id === req.params.id);
+  if (index !== -1) {
+    lessons.splice(index, 1);
+    res.json({ message: 'Lesson deleted successfully!' });
+  } else {
+    res.status(404).json({ message: 'Lesson not found' });
+  }
+});
 
 module.exports = router;

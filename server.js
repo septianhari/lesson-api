@@ -3,12 +3,17 @@ const bodyParser = require('body-parser');
 const lessonRoutes = require('./routes/lessonRoutes');
 
 const app = express();
-const port = 3000;
+const port = 8080;
 
 // Middleware untuk parsing JSON request body
 app.use(bodyParser.json());
 
-// Gunakan routes
+// Rute untuk root
+app.get('/', (req, res) => {
+  res.send('Welcome to the Lesson API!');
+});
+
+// Gunakan routes untuk /api
 app.use('/api', lessonRoutes);
 
 // Jalankan server
