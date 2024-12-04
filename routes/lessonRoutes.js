@@ -27,7 +27,7 @@ const lessons = [
   },
   {
     id: 'lesson-4',
-    title: 'Learn Basic S-z',
+    title: 'Learn Basic S-Z',
     subTitle: 'Advanced - 6 Lessons',
     photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/8.png',  
     completed: false
