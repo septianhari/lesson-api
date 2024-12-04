@@ -13,11 +13,25 @@ const lessons = [
   },
   {
     id: 'lesson-2',
-    title: 'Learn Basic G-Z',
+    title: 'Learn Basic G-L',
     subTitle: 'Beginner - 6 Lessons',
-    photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/1.png',  
-    completed: true
-  }
+    photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/3.png',  
+    completed: false
+  },
+  {
+    id: 'lesson-3',
+    title: 'Learn Basic M-R',
+    subTitle: 'Intermediete - 6 Lessons',
+    photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/6.png',  
+    completed: false
+  },
+  {
+    id: 'lesson-4',
+    title: 'Learn Basic S-z',
+    subTitle: 'Advanced - 6 Lessons',
+    photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/8.png',  
+    completed: false
+  },
 ];
 
 // GET /api/lessons
