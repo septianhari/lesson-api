@@ -46,8 +46,9 @@ router.post('/lessons', (req, res) => {
     id: `lesson-${lessons.length + 1}`,
     title,
     subTitle,
-    completed,
-    photoUrl  // Pastikan photoUrl juga diterima dari request body
+    photoUrl,  
+    completed
+    
   };
   lessons.push(newLesson);
   res.status(201).json({ message: 'Lesson added successfully!', lesson: newLesson });
@@ -70,8 +71,8 @@ router.put('/lessons/:id', (req, res) => {
   if (lesson) {
     lesson.title = title || lesson.title;
     lesson.subTitle = subTitle || lesson.subTitle;
-    lesson.completed = completed !== undefined ? completed : lesson.completed;
     lesson.photoUrl = photoUrl || lesson.photoUrl;  // Update photoUrl jika ada
+    lesson.completed = completed !== undefined ? completed : lesson.completed;
     res.json({ message: 'Lesson updated successfully!', lesson });
   } else {
     res.status(404).json({ message: 'Lesson not found' });
