@@ -9,27 +9,31 @@ const lessons = [
     title: 'Learn Basic A-F',
     subTitle: 'Beginner - 6 Lessons',
     photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/1.png',
+    yt_url: 'https://youtube.com/shorts/335_Zxhuo-Y?feature=shared',
     completed: false, 
   },
   {
     id: 'lesson-2',
     title: 'Learn Basic G-L',
     subTitle: 'Beginner - 6 Lessons',
-    photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/3.png',  
+    photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/3.png',
+    yt_url: 'https://youtu.be/5o5E_Q8wWvM?feature=shared',
     completed: false
   },
   {
     id: 'lesson-3',
     title: 'Learn Basic M-R',
     subTitle: 'Intermediete - 6 Lessons',
-    photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/6.png',  
+    photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/6.png',
+    yt_url: 'https://youtu.be/zauLekMGtvw?feature=shared',
     completed: false
   },
   {
     id: 'lesson-4',
     title: 'Learn Basic S-Z',
     subTitle: 'Advanced - 6 Lessons',
-    photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/8.png',  
+    photoUrl: 'https://storage.googleapis.com/another-file-deployment/assets/icon-material/8.png',
+    yt_url: 'https://youtu.be/J5DrY2rVaeg?feature=shared',
     completed: false
   },
 ];
